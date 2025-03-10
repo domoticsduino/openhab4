@@ -26,9 +26,9 @@ sudo mkdir -v "$BACKUPDIR$BACKUPNAME/influxdb";
 echo -e ""
 
 echo -e "\e[96m###########################\e[0m"
-echo -e "\e[96m##### \e[31mopenHAB3 Backup \e[96m#####\e[0m"
+echo -e "\e[96m##### \e[31mopenHAB4 Backup \e[96m#####\e[0m"
 echo -e "\e[96m###########################\e[0m"
-echo -e "Creating openHAB3 backup..."
+echo -e "Creating openHAB4 backup..."
 sudo openhab-cli backup "$BACKUPDIR$BACKUPNAME/openhab/openhab-backup.zip"
 
 echo -e "\e[96m###########################\e[0m"
