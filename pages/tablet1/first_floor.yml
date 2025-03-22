@@ -1,0 +1,308 @@
+config:
+  backgroundColor: black
+  imageUrl: http://192.168.1.8:8080/static/floorplan/primo-piano.jpg
+  imageWidth: 1920
+  label: Primo Piano
+  noMarkerZoomAnimation: true
+  noZoomAnimation: true
+  noZoomOrDrag: true
+  order: "3"
+  sidebar: true
+  tooltipColor: black
+markers:
+  - component: oh-plan-marker
+    config:
+      action: toggle
+      actionCommand: ON
+      actionCommandAlt: OFF
+      actionItem: ptPPMansardaLuce
+      coords: 461.6791550043436,764.540680687193
+      icon: iconify:raphael:lamp-alt
+      iconColor: "=(items.ptPPMansardaLuce.state == 'ON') ? 'yellow' : 'white'"
+      iconSize: 64
+      iconUseState: true
+      item: ptPPMansardaLuce
+      name: Luce Mansarda
+      tooltipDirection: right
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+      tooltipPermanent: false
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: toggle
+      actionCommand: ON
+      actionCommandAlt: OFF
+      actionItem: ptPPMansardaLuce
+      coords: 714.0637597400515,446.9054220442046
+      icon: iconify:raphael:lamp-alt
+      iconColor: "=(items.ptPPMansardaLuce.state == 'ON') ? 'yellow' : 'white'"
+      iconSize: 64
+      iconUseState: true
+      item: ptPPMansardaLuce
+      name: Luce Mansarda
+      tooltipDirection: right
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+      tooltipPermanent: false
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: toggle
+      actionCommand: ON
+      actionCommandAlt: OFF
+      actionItem: ptPPCamerettaLuce
+      coords: 614.6086976870637,1113.6082380610503
+      icon: iconify:raphael:lamp-alt
+      iconColor: "=(items.ptPPCamerettaLuce.state == 'ON') ? 'yellow' : 'white'"
+      iconSize: 64
+      iconUseState: true
+      item: ptPPCamerettaLuce
+      name: Luce Cameretta
+      tooltipDirection: right
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+      tooltipPermanent: false
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: toggle
+      actionCommand: ON
+      actionCommandAlt: OFF
+      actionItem: ptPPSoppalcoCamerettaLuce
+      coords: 507.71602984759653,963.5252996951227
+      icon: iconify:raphael:lamp-alt
+      iconColor: "=(items.ptPPSoppalcoCamerettaLuce.state == 'ON') ? 'yellow' : 'white'"
+      iconSize: 64
+      iconUseState: true
+      item: ptPPSoppalcoCamerettaLuce
+      name: Luce Soppalco
+      tooltipDirection: right
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+      tooltipPermanent: false
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: toggle
+      actionCommand: ON
+      actionCommandAlt: OFF
+      actionItem: ptPPCamerettaNotturnaRGBLuce
+      coords: 770.2886327361452,1218.770788614574
+      icon: iconify:heroicons-outline:light-bulb
+      iconColor: "=(items.ptPPCamerettaNotturnaRGBLuce.state == 'ON') ? 'yellow' :
+        'white'"
+      iconSize: 64
+      iconUseState: true
+      item: ptPPCamerettaNotturnaRGBLuce
+      name: Luce Notturna Cameretta
+      tooltipDirection: right
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+      tooltipPermanent: false
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: toggle
+      actionCommand: ON
+      actionCommandAlt: OFF
+      actionItem: ptPPCameraLettoLuce
+      coords: 663.5868387929099,1354.258854679408
+      icon: iconify:raphael:lamp-alt
+      iconColor: "=(items.ptPPCameraLettoLuce.state == 'ON') ? 'yellow' : 'white'"
+      iconSize: 64
+      iconUseState: true
+      item: ptPPCameraLettoLuce
+      name: Luce Camera da letto
+      tooltipDirection: right
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+      tooltipPermanent: false
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: toggle
+      actionCommand: ON
+      actionCommandAlt: OFF
+      actionItem: ptPPCameraLettoNotturnaRGBPower
+      coords: 446.9054220442046,1340.716266132614
+      icon: iconify:heroicons-outline:light-bulb
+      iconColor: "=(items.ptPPCameraLettoNotturnaRGBPower.state == 'ON') ? 'yellow' :
+        'white'"
+      iconSize: 64
+      iconUseState: true
+      item: ptPPCameraLettoNotturnaRGBPower
+      name: Luce Notturna Camera da letto
+      tooltipDirection: right
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+      tooltipPermanent: false
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: toggle
+      actionCommand: ON
+      actionCommandAlt: OFF
+      actionItem: ptPPCorridoioLuce
+      coords: 217.9125611620502,1431.8209527201377
+      icon: iconify:raphael:lamp-alt
+      iconColor: "=(items.ptPPCorridoioLuce.state == 'ON') ? 'yellow' : 'white'"
+      iconSize: 64
+      iconUseState: true
+      item: ptPPCorridoioLuce
+      name: Luce Corridoio
+      tooltipDirection: right
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+      tooltipPermanent: false
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: analyzer
+      actionAnalyzerCoordSystem: time
+      actionAnalyzerItems:
+        - ptPPMansardaTemperatura
+      coords: 363.1876019367503,464.1414438310335
+      icon: "=(items.ptPPMansardaTemperatura.state <= 5) ?
+        'iconify:uil:temperature-empty' : (items.ptPPMansardaTemperatura.state
+        <= 15) ? 'iconify:uil:temperature-quarter' :
+        (items.ptPPMansardaTemperatura.state <= 25) ?
+        'iconify:uil:temperature-half' : (items.ptPPMansardaTemperatura.state <=
+        35) ? 'iconify:uil:temperature-three-quarter' :
+        'iconify:uil:temperature-full'"
+      iconColor: "=(items.ptPPMansardaTemperatura.state <= 5) ? 'blue' :
+        (items.ptPPMansardaTemperatura.state <= 15) ? 'cyan' :
+        (items.ptPPMansardaTemperatura.state <= 25) ? 'green' :
+        (items.ptPPMansardaTemperatura.state <= 35) ? 'orange' : 'red'"
+      iconSize: 62
+      iconUseState: true
+      item: ptPPMansardaTemperatura
+      name: Temp Mandarda
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+      tooltipPermanent: true
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: analyzer
+      actionAnalyzerCoordSystem: time
+      actionAnalyzerItems:
+        - ptPPCamerettaTemperatura
+      coords: 822.4044681144042,961.5237868223796
+      icon: "=(items.ptPPCamerettaTemperatura.state <= 5) ?
+        'iconify:uil:temperature-empty' : (items.ptPPCamerettaTemperatura.state
+        <= 15) ? 'iconify:uil:temperature-quarter' :
+        (items.ptPPCamerettaTemperatura.state <= 25) ?
+        'iconify:uil:temperature-half' : (items.ptPPCamerettaTemperatura.state
+        <= 35) ? 'iconify:uil:temperature-three-quarter' :
+        'iconify:uil:temperature-full'"
+      iconColor: "=(items.ptPPCamerettaTemperatura.state <= 5) ? 'blue' :
+        (items.ptPPCamerettaTemperatura.state <= 15) ? 'cyan' :
+        (items.ptPPCamerettaTemperatura.state <= 25) ? 'green' :
+        (items.ptPPCamerettaTemperatura.state <= 35) ? 'orange' : 'red'"
+      iconSize: 62
+      iconUseState: true
+      item: ptPPCamerettaTemperatura
+      name: Temp Cameretta
+      tooltipDirection: right
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+      tooltipPermanent: true
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: analyzer
+      actionAnalyzerCoordSystem: time
+      actionAnalyzerItems:
+        - ptPPMansardaUmidita
+      coords: 739.314360891268,606.2514335330968
+      icon: oh:humidity
+      iconSize: 64
+      iconUseState: true
+      item: ptPPMansardaUmidita
+      name: Umidità Mansarda
+      tooltipFontSize: 24px
+      tooltipOffsetX: 20
+      tooltipOpacity: 0.7
+      tooltipPermanent: true
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: analyzer
+      actionAnalyzerCoordSystem: time
+      actionAnalyzerItems:
+        - ptPPCamerettaUmidita
+      coords: 679.5917161663938,950.4434871022754
+      icon: oh:humidity
+      iconSize: 64
+      iconUseState: true
+      item: ptPPCamerettaUmidita
+      name: Umidità Cameretta
+      tooltipDirection: right
+      tooltipFontSize: 24px
+      tooltipOffsetX: 20
+      tooltipOpacity: 0.7
+      tooltipPermanent: true
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: toggle
+      actionCommand: ON
+      actionCommandAlt: OFF
+      actionItem: grLuciPP
+      coords: 913.4236736065418,1436.3870583948437
+      icon: iconify:raphael:lamp-alt
+      iconColor: "=(items.grLuciPP.state == 'ON') ? 'yellow' : 'white'"
+      iconSize: 96
+      iconUseState: true
+      item: grLuciPP
+      name: Luci Primo Piano
+      tooltipDirection: right
+      tooltipFontSize: 24px
+      tooltipOffsetX: 15
+      tooltipOpacity: 0.7
+      tooltipPermanent: false
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: toggle
+      actionCommand: ON
+      actionCommandAlt: OFF
+      actionItem: ptPPBagnoLuce
+      coords: 272.2494385758024,928.2419790647637
+      icon: iconify:raphael:lamp-alt
+      iconColor: "=(items.ptPPBagnoLuce.state == 'ON') ? 'yellow' : 'white'"
+      iconSize: 64
+      iconUseState: true
+      item: ptPPBagnoLuce
+      name: Luce Bagno
+      tooltipDirection: right
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+      tooltipPermanent: false
+    slots:
+      default: []

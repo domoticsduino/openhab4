@@ -1,0 +1,150 @@
+config:
+  fixedType: canvas
+  gridEnable: true
+  label: Allarmi
+  layoutType: fixed
+  screenHeight: 600
+  screenWidth: 1150
+  sidebar: true
+blocks: []
+masonry: []
+grid: []
+canvas:
+  - component: oh-canvas-layer
+    config: {}
+    slots:
+      default:
+        - component: oh-canvas-item
+          config:
+            h: 160
+            noCanvasShadow: true
+            w: 360
+            x: 20
+            y: 20
+          slots:
+            default:
+              - component: oh-label-card
+                config:
+                  action: group
+                  actionGroupPopupItem: grNetworkCheckError
+                  fontSize: 64px
+                  icon: "= (items.itNetworkAlarm.state === 'ON') ?
+                    'iconify:akar-icons:triangle-alert-fill' :
+                    'iconify:ant-design:check-circle-filled'"
+                  iconColor: "= (items.itNetworkAlarm.state === 'OFF') ? 'green' : 'red'"
+                  iconSize: 76
+                  item: itNetworkAlarm
+                  label: "= (items.itNetworkAlarm.state === 'ON') ? 'ERR' : 'OK'"
+                  title: ALLARME NETWORK
+        - component: oh-canvas-item
+          config:
+            h: 160
+            noCanvasShadow: true
+            w: 360
+            x: 400
+            y: 20
+          slots:
+            default:
+              - component: oh-label-card
+                config:
+                  action: group
+                  actionGroupPopupItem: ptSystemInfo_Storage_AvailablePercent
+                  fontSize: 64px
+                  icon: "= (items.itSpazioDiscoAllarme.state === 'ON') ?
+                    'iconify:akar-icons:triangle-alert-fill' :
+                    'iconify:ant-design:check-circle-filled'"
+                  iconColor: "= (items.itSpazioDiscoAllarme.state === 'OFF') ? 'green' : 'red'"
+                  iconSize: 76
+                  item: itSpazioDiscoAllarme
+                  label: "= (items.itSpazioDiscoAllarme.state === 'ON') ? 'ERR' : 'OK'"
+                  title: ALLARME SPAZIO DISCO
+        - component: oh-canvas-item
+          config:
+            h: 160
+            noCanvasShadow: true
+            w: 360
+            x: 780
+            y: 20
+          slots:
+            default:
+              - component: oh-label-card
+                config:
+                  action: group
+                  actionGroupPopupItem: grEnergia
+                  fontSize: 64px
+                  icon: "= (items.itEnergiaAllarme.state === 'ON') ?
+                    'iconify:akar-icons:triangle-alert-fill' :
+                    'iconify:ant-design:check-circle-filled'"
+                  iconColor: "= (items.itEnergiaAllarme.state === 'OFF') ? 'green' : 'red'"
+                  iconSize: 76
+                  item: itEnergiaAllarme
+                  label: "= (items.itEnergiaAllarme.state === 'ON') ? 'ERR' : 'OK'"
+                  title: ALLARME ENERGIA
+        - component: oh-canvas-item
+          config:
+            h: 160
+            noCanvasShadow: true
+            w: 360
+            x: 20
+            y: 220
+          slots:
+            default:
+              - component: oh-label-card
+                config:
+                  action: group
+                  actionGroupPopupItem: grTSExpired
+                  fontSize: 64px
+                  icon: "= (items.itItemNonAggiornatiAllarme.state === 'ON') ?
+                    'iconify:akar-icons:triangle-alert-fill' :
+                    'iconify:ant-design:check-circle-filled'"
+                  iconColor: "= (items.itItemNonAggiornatiAllarme.state === 'OFF') ? 'green' :
+                    'red'"
+                  iconSize: 76
+                  item: itItemNonAggiornatiAllarme
+                  label: "= (items.itItemNonAggiornatiAllarme.state === 'ON') ? 'ERR' : 'OK'"
+                  title: ALLARME ITEMS NON AGGIORNATI
+        - component: oh-canvas-item
+          config:
+            h: 160
+            noCanvasShadow: true
+            w: 360
+            x: 400
+            y: 220
+          slots:
+            default:
+              - component: oh-label-card
+                config:
+                  action: group
+                  actionGroupPopupItem: ptPTCucinaRilevamentoGas
+                  fontSize: 64px
+                  icon: "= (items.itPTCucinaRilevamentoGasAllarme.state === 'ON') ?
+                    'iconify:akar-icons:triangle-alert-fill' :
+                    'iconify:ant-design:check-circle-filled'"
+                  iconColor: "= (items.itPTCucinaRilevamentoGasAllarme.state === 'ON') ? 'red' :
+                    'green'"
+                  iconSize: 76
+                  item: itPTCucinaRilevamentoGasAllarme
+                  label: "= (items.itPTCucinaRilevamentoGasAllarme.state === 'ON') ? 'ERR' : 'OK'"
+                  title: ALLARME GAS CUCINA
+        - component: oh-canvas-item
+          config:
+            h: 160
+            noCanvasShadow: true
+            w: 360
+            x: 780
+            y: 220
+          slots:
+            default:
+              - component: oh-label-card
+                config:
+                  action: group
+                  actionGroupPopupItem: grRobotVacuumConsumable
+                  fontSize: 64px
+                  icon: "= (items.itRobotAllarme.state === 'ON') ?
+                    'iconify:akar-icons:triangle-alert-fill' :
+                    'iconify:ant-design:check-circle-filled'"
+                  iconColor: "= (items.itRobotAllarme.state === 'OFF') ? 'green' : 'red'"
+                  iconSize: 76
+                  item: itRobotAllarme
+                  label: "= (items.itRobotAllarme.state === 'ON') ? 'ERR' : 'OK'"
+                  title: ALLARME ROBOT

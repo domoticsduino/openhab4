@@ -1,0 +1,717 @@
+config:
+  darkModeInvert: false
+  imageHeight: 1080
+  imageUrl: http://192.168.1.8:8080/static/floorplan/piano-terra.jpg
+  imageWidth: 1920
+  label: Piano Terra
+  noZoomAnimation: true
+  order: "4"
+  sidebar: true
+  tooltipColor: blackwhite
+markers:
+  - component: oh-plan-marker
+    config:
+      action: analyzer
+      actionAnalyzerCoordSystem: time
+      actionAnalyzerItems:
+        - ptPTCucinaRilevamentoGas
+      coords: 954.0042194888026,407.72794442882434
+      icon: iconify:mdi:gas-burner
+      iconColor: "=(items.ptPTCucinaRilevamentoGas.state > 100) ? 'red' : 'green'"
+      iconSize: 64
+      item: ptPTCucinaRilevamentoGas
+      name: Gas cucina
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+      tooltipPermanent: true
+      useTooltipAsLabel: false
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: analyzer
+      actionAnalyzerCoordSystem: time
+      actionAnalyzerItems:
+        - ptPTCucinaTemperatura
+      coords: 794.3437622852824,370.7817229271833
+      icon: "=(items.ptPTCucinaTemperatura.state <= 5) ?
+        'iconify:uil:temperature-empty' : (items.ptPTCucinaTemperatura.state <=
+        15) ? 'iconify:uil:temperature-quarter' :
+        (items.ptPTCucinaTemperatura.state <= 25) ?
+        'iconify:uil:temperature-half' : (items.ptPTCucinaTemperatura.state <=
+        35) ? 'iconify:uil:temperature-three-quarter' :
+        'iconify:uil:temperature-full'"
+      iconColor: "=(items.ptPTCucinaTemperatura.state <= 5) ? 'blue' :
+        (items.ptPTCucinaTemperatura.state <= 15) ? 'cyan' :
+        (items.ptPTCucinaTemperatura.state <= 25) ? 'green' :
+        (items.ptPTCucinaTemperatura.state <= 35) ? 'orange' : 'red'"
+      iconSize: 62
+      iconUseState: true
+      item: ptPTCucinaTemperatura
+      name: Temp Cucina
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+      tooltipPermanent: true
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: analyzer
+      actionAnalyzerCoordSystem: time
+      actionAnalyzerItems:
+        - ptPTCucinaUmidita
+      coords: 643.9198604571725,204.52372616979864
+      icon: oh:humidity
+      iconSize: 64
+      iconUseState: true
+      item: ptPTCucinaUmidita
+      name: Umidità Cucina
+      tooltipFontSize: 24px
+      tooltipOffsetX: 20
+      tooltipOpacity: 0.7
+      tooltipPermanent: true
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: analyzer
+      actionAnalyzerCoordSystem: time
+      actionAnalyzerItems:
+        - ptEnergiaTempoReale
+      coords: 91.04604584332971,80.48998255714656
+      icon: iconify:simple-line-icons:energy
+      iconColor: "=(items.ptEnergiaTempoReale.state >= 0) ? 'blue' : 'yellow'"
+      iconSize: 80
+      iconUseState: true
+      item: ptEnergiaTempoReale
+      name: Consumo Energia
+      tooltipColor: "=(items.ptEnergiaTempoReale.state >= 0) ? 'blue' : 'yellow'"
+      tooltipDirection: right
+      tooltipFontSize: 48px
+      tooltipOffsetX: 20
+      tooltipOpacity: 0.7
+      tooltipPermanent: true
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: toggle
+      actionCommand: ON
+      actionCommandAlt: OFF
+      actionItem: ptPTSoggiorno2Luce
+      coords: 445.99367384123826,1034.4942020459491
+      icon: iconify:raphael:lamp-alt
+      iconColor: "=(items.ptPTSoggiorno2Luce.state == 'ON') ? 'yellow' : 'white'"
+      iconSize: 64
+      iconUseState: true
+      item: ptPTSoggiorno2Luce
+      name: Luce soggiorno 2
+      tooltipDirection: right
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+      tooltipPermanent: false
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: toggle
+      actionCommand: ON
+      actionCommandAlt: OFF
+      actionItem: ptPTCucinaLuce
+      coords: 679.5465740480406,449.952197573557
+      icon: iconify:raphael:lamp-alt
+      iconColor: "=(items.ptPTCucinaLuce.state == 'ON') ? 'yellow' : 'white'"
+      iconSize: 64
+      iconUseState: true
+      item: ptPTCucinaLuce
+      name: Luce cucina
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+      tooltipPermanent: false
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: toggle
+      actionCommand: ON
+      actionCommandAlt: OFF
+      actionItem: ptPTSoggiorno1Luce
+      coords: 525.1641484876119,928.9335691841176
+      icon: iconify:raphael:lamp-alt
+      iconColor: "=(items.ptPTSoggiorno1Luce.state == 'ON') ? 'yellow' : 'white'"
+      iconSize: 64
+      iconUseState: true
+      item: ptPTSoggiorno1Luce
+      name: Luce Soggiorno 1
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+      tooltipPermanent: false
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: toggle
+      actionCommand: ON
+      actionCommandAlt: OFF
+      actionItem: ptPTSoggiornoRGBPower
+      coords: 207.1627419913444,1158.5279456586013
+      icon: iconify:iconoir:lamp
+      iconColor: "=(items.ptPTSoggiornoRGBPower.state == 'ON') ? 'yellow' : 'white'"
+      iconSize: 64
+      iconUseState: true
+      item: ptPTSoggiornoRGBPower
+      name: Lampada colorata soggiorno
+      tooltipDirection: right
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+      tooltipPermanent: false
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: toggle
+      actionCommand: ON
+      actionCommandAlt: OFF
+      actionItem: ptPTSoggiornoTvLed
+      coords: 453.91072130587565,804.8998255714655
+      icon: iconify:mdi:led-strip
+      iconColor: "=(items.ptPTSoggiornoTvLed.state == 'ON') ? 'yellow' : 'white'"
+      iconRotation: 55
+      iconSize: 64
+      iconUseState: true
+      item: ptPTSoggiornoTvLed
+      name: Led TV
+      tooltipDirection: right
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+      tooltipPermanent: false
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: toggle
+      actionCommand: ON
+      actionCommandAlt: OFF
+      actionItem: ptPTSoggiornoDivanoLed
+      coords: 395.8523732318683,1184.9181038740592
+      icon: iconify:mdi:led-strip
+      iconColor: "=(items.ptPTSoggiornoDivanoLed.state == 'ON') ? 'yellow' : 'white'"
+      iconRotation: 50
+      iconSize: 64
+      iconUseState: true
+      item: ptPTSoggiornoDivanoLed
+      name: Led Divano
+      tooltipDirection: right
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+      tooltipPermanent: false
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: analyzer
+      actionAnalyzerCoordSystem: time
+      actionAnalyzerItems:
+        - ptPTSoggiornoUmidita
+      coords: 750.8000012297769,736.285414211275
+      icon: oh:humidity
+      iconSize: 64
+      iconUseState: true
+      item: ptPTSoggiornoUmidita
+      name: Umidità Soggiorno
+      tooltipFontSize: 24px
+      tooltipOffsetX: 20
+      tooltipOpacity: 0.7
+      tooltipPermanent: true
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: analyzer
+      actionAnalyzerCoordSystem: time
+      actionAnalyzerItems:
+        - ptPTSoggiornoTemperatura
+      coords: 680.8660819588134,976.4358539719418
+      icon: "=(items.ptPTSoggiornoTemperatura.state <= 5) ?
+        'iconify:uil:temperature-empty' : (items.ptPTSoggiornoTemperatura.state
+        <= 15) ? 'iconify:uil:temperature-quarter' :
+        (items.ptPTSoggiornoTemperatura.state <= 25) ?
+        'iconify:uil:temperature-half' : (items.ptPTSoggiornoTemperatura.state
+        <= 35) ? 'iconify:uil:temperature-three-quarter' :
+        'iconify:uil:temperature-full'"
+      iconColor: "=(items.ptPTSoggiornoTemperatura.state <= 5) ? 'blue' :
+        (items.ptPTSoggiornoTemperatura.state <= 15) ? 'cyan' :
+        (items.ptPTSoggiornoTemperatura.state <= 25) ? 'green' :
+        (items.ptPTSoggiornoTemperatura.state <= 35) ? 'orange' : 'red'"
+      iconSize: 62
+      iconUseState: true
+      item: ptPTSoggiornoTemperatura
+      name: Temp Soggiorno
+      tooltipDirection: right
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+      tooltipPermanent: true
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: toggle
+      actionCommand: ON
+      actionCommandAlt: OFF
+      actionItem: ptPTBagnoLuce
+      coords: 670.3100186726303,1571.5339217305172
+      icon: iconify:raphael:lamp-alt
+      iconColor: "=(items.ptPTBagnoLuce.state == 'ON') ? 'yellow' : 'white'"
+      iconSize: 64
+      iconUseState: true
+      item: ptPTBagnoLuce
+      name: Luce Bagno
+      tooltipDirection: right
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+      tooltipPermanent: false
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: analyzer
+      actionAnalyzerCoordSystem: time
+      actionAnalyzerItems:
+        - ptPTBagnoTemperatura
+      coords: 782.4681910883263,1645.4263647337993
+      icon: "=(items.ptPTBagnoTemperatura.state <= 5) ?
+        'iconify:uil:temperature-empty' : (items.ptPTBagnoTemperatura.state <=
+        15) ? 'iconify:uil:temperature-quarter' :
+        (items.ptPTBagnoTemperatura.state <= 25) ?
+        'iconify:uil:temperature-half' : (items.ptPTBagnoTemperatura.state <=
+        35) ? 'iconify:uil:temperature-three-quarter' :
+        'iconify:uil:temperature-full'"
+      iconColor: "=(items.ptPTBagnoTemperatura.state <= 5) ? 'blue' :
+        (items.ptPTBagnoTemperatura.state <= 15) ? 'cyan' :
+        (items.ptPTBagnoTemperatura.state <= 25) ? 'green' :
+        (items.ptPTBagnoTemperatura.state <= 35) ? 'orange' : 'red'"
+      iconSize: 62
+      iconUseState: true
+      item: ptPTBagnoTemperatura
+      name: Temp Bagno
+      tooltipDirection: right
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+      tooltipPermanent: true
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: analyzer
+      actionAnalyzerCoordSystem: time
+      actionAnalyzerItems:
+        - ptPTBagnoUmidita
+      coords: 819.4144125899674,1434.3050990101362
+      icon: oh:humidity
+      iconSize: 64
+      iconUseState: true
+      item: ptPTBagnoUmidita
+      name: Umidità Bagno
+      tooltipDirection: right
+      tooltipFontSize: 24px
+      tooltipOffsetX: 20
+      tooltipOpacity: 0.7
+      tooltipPermanent: true
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: toggle
+      actionCommand: ON
+      actionCommandAlt: OFF
+      actionItem: ptPTDisimpegnoLuce
+      coords: 687.463621512678,1369.6492113822644
+      icon: iconify:raphael:lamp-alt
+      iconColor: "=(items.ptPTDisimpegnoLuce.state == 'ON') ? 'yellow' : 'white'"
+      iconSize: 64
+      iconUseState: true
+      item: ptPTDisimpegnoLuce
+      name: Luce Disimpegno
+      tooltipDirection: right
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+      tooltipPermanent: false
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: toggle
+      actionCommand: ON
+      actionCommandAlt: OFF
+      actionItem: ptPTStudioLuce
+      coords: 242.78945558221255,1539.8657318719677
+      icon: iconify:raphael:lamp-alt
+      iconColor: "=(items.ptPTStudioLuce.state == 'ON') ? 'yellow' : 'white'"
+      iconSize: 64
+      iconUseState: true
+      item: ptPTStudioLuce
+      name: Luce Studio
+      tooltipDirection: right
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+      tooltipPermanent: false
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: toggle
+      actionCommand: ON
+      actionCommandAlt: OFF
+      actionItem: ptPTStudioScrivaniaRGBPower
+      coords: 307.4453432100844,1341.9395452560336
+      icon: iconify:mdi:desk-lamp
+      iconColor: "=(items.ptPTStudioScrivaniaRGBPower.state == 'ON') ? 'yellow' : 'white'"
+      iconSize: 64
+      iconUseState: true
+      item: ptPTStudioScrivaniaRGBPower
+      name: Luce Scrivania Studio
+      tooltipDirection: right
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+      tooltipPermanent: false
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: analyzer
+      actionAnalyzerCoordSystem: time
+      actionAnalyzerItems:
+        - ptPTStudioTemperatura
+      coords: 403.7694206965057,1563.6168742658797
+      icon: "=(items.ptPTStudioTemperatura.state <= 5) ?
+        'iconify:uil:temperature-empty' : (items.ptPTStudioTemperatura.state <=
+        15) ? 'iconify:uil:temperature-quarter' :
+        (items.ptPTStudioTemperatura.state <= 25) ?
+        'iconify:uil:temperature-half' : (items.ptPTStudioTemperatura.state <=
+        35) ? 'iconify:uil:temperature-three-quarter' :
+        'iconify:uil:temperature-full'"
+      iconColor: "=(items.ptPTStudioTemperatura.state <= 5) ? 'blue' :
+        (items.ptPTStudioTemperatura.state <= 15) ? 'cyan' :
+        (items.ptPTStudioTemperatura.state <= 25) ? 'green' :
+        (items.ptPTStudioTemperatura.state <= 35) ? 'orange' : 'red'"
+      iconSize: 62
+      iconUseState: true
+      item: ptPTStudioTemperatura
+      name: Temp Studio
+      tooltipDirection: right
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+      tooltipPermanent: true
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: analyzer
+      actionAnalyzerCoordSystem: time
+      actionAnalyzerItems:
+        - ptPTStudioUmidita
+      coords: 467.1058004136046,1356.4541322745354
+      icon: oh:humidity
+      iconSize: 64
+      iconUseState: true
+      item: ptPTStudioUmidita
+      name: Umidità Studio
+      tooltipDirection: right
+      tooltipFontSize: 24px
+      tooltipOffsetX: 20
+      tooltipOpacity: 0.7
+      tooltipPermanent: true
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: toggle
+      actionCommand: ON
+      actionCommandAlt: OFF
+      actionItem: ptPTIngressoLuce
+      coords: 302.1673115669928,646.5588762787182
+      icon: iconify:raphael:lamp-alt
+      iconColor: "=(items.ptPTIngressoLuce.state == 'ON') ? 'yellow' : 'white'"
+      iconSize: 64
+      iconUseState: true
+      item: ptPTIngressoLuce
+      name: Luce Ingresso
+      tooltipDirection: right
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+      tooltipPermanent: false
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: toggle
+      actionCommand: ON
+      actionCommandAlt: OFF
+      actionItem: ptEXIngressoLuce
+      coords: 434.11810264428226,472.3838320566962
+      icon: iconify:mdi:coach-lamp
+      iconColor: "=(items.ptEXIngressoLuce.state == 'ON') ? 'yellow' : 'white'"
+      iconSize: 64
+      iconUseState: true
+      item: ptEXIngressoLuce
+      name: Luce Esterna Ingresso
+      tooltipDirection: right
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+      tooltipPermanent: false
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: toggle
+      actionCommand: ON
+      actionCommandAlt: OFF
+      actionItem: ptEXCucinaLuce
+      coords: 843.1655549838795,139.8678385419268
+      icon: iconify:mdi:coach-lamp
+      iconColor: "=(items.ptEXCucinaLuce.state == 'ON') ? 'yellow' : 'white'"
+      iconSize: 64
+      iconUseState: true
+      item: ptEXCucinaLuce
+      name: Luce Esterna Cucina
+      tooltipDirection: right
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+      tooltipPermanent: false
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: toggle
+      actionCommand: ON
+      actionCommandAlt: OFF
+      actionItem: ptEXNotturnaLuce
+      coords: 162.299473025066,630.7247813494434
+      icon: iconify:mdi:coach-lamp
+      iconColor: "=(items.ptEXNotturnaLuce.state == 'ON') ? 'yellow' : 'white'"
+      iconSize: 64
+      iconUseState: true
+      item: ptEXNotturnaLuce
+      name: Luce Esterna Notturna 1
+      tooltipDirection: right
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+      tooltipPermanent: false
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: toggle
+      actionCommand: ON
+      actionCommandAlt: OFF
+      actionItem: ptEXNotturnaLuce
+      coords: 1016.0210912951286,773.231635712916
+      icon: iconify:mdi:coach-lamp
+      iconColor: "=(items.ptEXNotturnaLuce.state == 'ON') ? 'yellow' : 'white'"
+      iconSize: 64
+      iconUseState: true
+      item: ptEXNotturnaLuce
+      name: Luce Esterna Notturna 2
+      tooltipDirection: right
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+      tooltipPermanent: false
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: toggle
+      actionCommand: ON
+      actionCommandAlt: OFF
+      actionItem: ptEXBalconeLuce
+      coords: 58.05834807400735,1162.4864693909199
+      icon: iconify:mdi:coach-lamp
+      iconColor: "=(items.ptEXBalconeLuce.state == 'ON') ? 'yellow' : 'white'"
+      iconSize: 64
+      iconUseState: true
+      item: ptEXBalconeLuce
+      name: Luce Esterna Balcone 1
+      tooltipDirection: right
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+      tooltipPermanent: false
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: toggle
+      actionCommand: ON
+      actionCommandAlt: OFF
+      actionItem: ptEXBalconeLuce
+      coords: 477.6618636997878,1855.2281225466895
+      icon: iconify:mdi:coach-lamp
+      iconColor: "=(items.ptEXBalconeLuce.state == 'ON') ? 'yellow' : 'white'"
+      iconSize: 64
+      iconUseState: true
+      item: ptEXBalconeLuce
+      name: Luce Esterna Balcone 2
+      tooltipDirection: right
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+      tooltipPermanent: false
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: toggle
+      actionCommand: ON
+      actionCommandAlt: OFF
+      actionItem: ptEXBalconeLuce
+      coords: 910.460458433297,1571.5339217305172
+      icon: iconify:mdi:coach-lamp
+      iconColor: "=(items.ptEXBalconeLuce.state == 'ON') ? 'yellow' : 'white'"
+      iconSize: 64
+      iconUseState: true
+      item: ptEXBalconeLuce
+      name: Luce Esterna Balcone 3
+      tooltipDirection: right
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+      tooltipPermanent: false
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: toggle
+      actionCommand: ON
+      actionCommandAlt: OFF
+      actionItem: grLuciPT
+      coords: 1018.6601071166745,1777.3771558110886
+      icon: iconify:raphael:lamp-alt
+      iconColor: "=(items.grLuciPT.state == 'ON') ? 'yellow' : 'white'"
+      iconSize: 96
+      iconUseState: true
+      item: grLuciPT
+      name: Luci Piano Terra
+      tooltipDirection: right
+      tooltipFontSize: 24px
+      tooltipOffsetX: 15
+      tooltipOpacity: 0.7
+      tooltipPermanent: false
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: analyzer
+      actionAnalyzerCoordSystem: time
+      actionAnalyzerItems:
+        - ptPTConsumoEnergia
+      coords: 1009.4235517412642,1080.6769789230004
+      icon: iconify:mdi:power-plug
+      iconColor: blue
+      iconSize: 80
+      iconUseState: true
+      item: ptPTConsumoEnergia
+      name: Consumo Energia
+      tooltipDirection: right
+      tooltipFontSize: 48px
+      tooltipOffsetX: 20
+      tooltipOpacity: 0.7
+      tooltipPermanent: true
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: analyzer
+      actionAnalyzerCoordSystem: time
+      actionAnalyzerItems:
+        - ptEXStazioneMeteoTemperaturaEsterno
+      coords: 258.6235505114873,89.72653793255681
+      icon: "=(items.ptEXStazioneMeteoTemperaturaEsterno.state <= 5) ?
+        'iconify:uil:temperature-empty' :
+        (items.ptEXStazioneMeteoTemperaturaEsterno.state <= 15) ?
+        'iconify:uil:temperature-quarter' :
+        (items.ptEXStazioneMeteoTemperaturaEsterno.state <= 25) ?
+        'iconify:uil:temperature-half' :
+        (items.ptEXStazioneMeteoTemperaturaEsterno.state <= 35) ?
+        'iconify:uil:temperature-three-quarter' :
+        'iconify:uil:temperature-full'"
+      iconColor: "=(items.ptEXStazioneMeteoTemperaturaEsterno.state <= 5) ? 'blue' :
+        (items.ptEXStazioneMeteoTemperaturaEsterno.state <= 15) ? 'cyan' :
+        (items.ptEXStazioneMeteoTemperaturaEsterno.state <= 25) ? 'green' :
+        (items.ptEXStazioneMeteoTemperaturaEsterno.state <= 35) ? 'orange' :
+        'red'"
+      iconSize: 80
+      iconUseState: true
+      item: ptEXStazioneMeteoTemperaturaEsterno
+      name: Temp Esterno
+      tooltipColor: "=(items.ptEXStazioneMeteoTemperaturaEsterno.state <= 5) ? 'blue'
+        : (items.ptEXStazioneMeteoTemperaturaEsterno.state <= 15) ? 'cyan' :
+        (items.ptEXStazioneMeteoTemperaturaEsterno.state <= 25) ? 'green' :
+        (items.ptEXStazioneMeteoTemperaturaEsterno.state <= 35) ? 'orange' :
+        'red'"
+      tooltipFontSize: 48px
+      tooltipOffsetX: 15
+      tooltipOpacity: 0.7
+      tooltipPermanent: true
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: toggle
+      actionCommand: ON
+      actionCommandAlt: OFF
+      actionItem: ptPTCucinaMurettoLuce
+      coords: 544.9567671492053,613.5711785093958
+      icon: iconify:mdi:floor-lamp-dual-outline
+      iconColor: "=(items.ptPTCucinaMurettoLuce.state == 'ON') ? 'yellow' : 'white'"
+      iconRotation: 180
+      iconSize: 64
+      iconUseState: true
+      item: ptPTCucinaMurettoLuce
+      name: Luce muretto
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+      tooltipPermanent: false
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: toggle
+      actionCommand: ON
+      actionCommandAlt: OFF
+      actionItem: ptPTCucinaLed
+      coords: 817.1444419138904,623.2660383465874
+      icon: iconify:mdi:led-strip
+      iconColor: "=(items.ptPTCucinaLed.state == 'ON') ? 'yellow' : 'white'"
+      iconRotation: 60
+      iconSize: 64
+      iconUseState: true
+      item: ptPTCucinaLed
+      name: Led Cucina
+      tooltipDirection: right
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+      tooltipPermanent: false
+    slots:
+      default: []

@@ -1,0 +1,230 @@
+config:
+  backgroundColor: black
+  imageUrl: http://192.168.1.8:8080/static/floorplan/giardino.jpg
+  imageWidth: 1920
+  label: Giardino
+  noZoomAnimation: true
+  order: "6"
+  sidebar: true
+  tooltipColor: black
+markers:
+  - component: oh-plan-marker
+    config:
+      action: toggle
+      actionCommand: ON
+      actionCommandAlt: OFF
+      actionItem: ptEXRocciosoLuce
+      coords: 551.5526971785225,301.6303812695045
+      icon: iconify:raphael:lamp-alt
+      iconColor: "=(items.ptEXRocciosoLuce.state == 'ON') ? 'yellow' : 'white'"
+      iconSize: 64
+      item: ptEXRocciosoLuce
+      name: Giardino Roccioso
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: toggle
+      actionCommand: ON
+      actionCommandAlt: OFF
+      actionItem: ptEXRoseLuce
+      coords: 315.1729698162986,1429.3586638934478
+      icon: iconify:raphael:lamp-alt
+      iconColor: "=(items.ptEXRoseLuce.state == 'ON') ? 'yellow' : 'white'"
+      iconSize: 64
+      item: ptEXRoseLuce
+      name: Rose
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: toggle
+      actionCommand: ON
+      actionCommandAlt: OFF
+      actionItem: ptEXBalconeLuce
+      coords: 647.581961419426,1495.8404622140733
+      icon: iconify:raphael:lamp-alt
+      iconColor: "=(items.ptEXBalconeLuce.state == 'ON') ? 'yellow' : 'white'"
+      iconSize: 64
+      item: ptEXBalconeLuce
+      name: Balcone
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: toggle
+      actionCommand: ON
+      actionCommandAlt: OFF
+      actionItem: ptEXBalconeLuce
+      coords: 489.9954765112767,1343.1785549593037
+      icon: iconify:raphael:lamp-alt
+      iconColor: "=(items.ptEXBalconeLuce.state == 'ON') ? 'yellow' : 'white'"
+      iconSize: 64
+      item: ptEXBalconeLuce
+      name: Balcone
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: toggle
+      actionCommand: ON
+      actionCommandAlt: OFF
+      actionItem: ptEXBalconeLuce
+      coords: 810.093023980955,1353.027710266063
+      icon: iconify:raphael:lamp-alt
+      iconColor: "=(items.ptEXBalconeLuce.state == 'ON') ? 'yellow' : 'white'"
+      iconSize: 64
+      item: ptEXBalconeLuce
+      name: Balcone
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: toggle
+      actionCommand: ON
+      actionCommandAlt: OFF
+      actionItem: ptEXIngressoLuce
+      coords: 611.8787734324235,924.5894544220322
+      icon: iconify:raphael:lamp-alt
+      iconColor: "=(items.ptEXIngressoLuce.state == 'ON') ? 'yellow' : 'white'"
+      iconSize: 64
+      item: ptEXIngressoLuce
+      name: Ingresso
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: toggle
+      actionCommand: ON
+      actionCommandAlt: OFF
+      actionItem: ptEXNotturnaLuce
+      coords: 529.3920977383141,1018.1564298362458
+      icon: iconify:raphael:lamp-alt
+      iconColor: "=(items.ptEXNotturnaLuce.state == 'ON') ? 'yellow' : 'white'"
+      iconSize: 64
+      item: ptEXNotturnaLuce
+      name: Notturne
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: toggle
+      actionCommand: ON
+      actionCommandAlt: OFF
+      actionItem: ptEXNotturnaLuce
+      coords: 829.7913345944736,960.2926424090348
+      icon: iconify:raphael:lamp-alt
+      iconColor: "=(items.ptEXNotturnaLuce.state == 'ON') ? 'yellow' : 'white'"
+      iconSize: 64
+      item: ptEXNotturnaLuce
+      name: Notturne
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: toggle
+      actionCommand: ON
+      actionCommandAlt: OFF
+      actionItem: ptEXCucinaLuce
+      coords: 718.9883373934312,774.3898359939524
+      icon: iconify:raphael:lamp-alt
+      iconColor: "=(items.ptEXCucinaLuce.state == 'ON') ? 'yellow' : 'white'"
+      iconSize: 64
+      item: ptEXCucinaLuce
+      name: Fronte Cucina
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: toggle
+      actionCommand: ON
+      actionCommandAlt: OFF
+      actionItem: ptExGazeboLuce
+      coords: 693.1343047131879,643.8885281793913
+      icon: iconify:raphael:lamp-alt
+      iconColor: "=(items.ptExGazeboLuce.state == 'ON') ? 'yellow' : 'white'"
+      iconSize: 64
+      item: ptExGazeboLuce
+      name: Gazebo
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: analyzer
+      actionAnalyzerCoordSystem: time
+      actionAnalyzerItems:
+        - ptEXStazioneMeteoTemperaturaEsterno
+      coords: 819.9421792877143,630.3459396325972
+      icon: "=(items.ptEXStazioneMeteoTemperaturaEsterno.state <= 5) ?
+        'iconify:fa6-solid:temperature-empty' :
+        (items.ptEXStazioneMeteoTemperaturaEsterno.state <=15) ?
+        'iconify:fa6-solid:temperature-quarter'
+        :  (items.ptEXStazioneMeteoTemperaturaEsterno.state <=25) ?
+        'iconify:fa6-solid:temperature-half'
+        :   (items.ptEXStazioneMeteoTemperaturaEsterno.state <=35)
+        ?  'iconify:fa6-solid:temperature-three-quarters' :
+        'iconify:fa6-solid:temperature-full'   "
+      iconColor: "=(items.ptEXStazioneMeteoTemperaturaEsterno.state <= 5) ? 'blue' :
+        (items.ptEXStazioneMeteoTemperaturaEsterno.state <=15) ? 'cyan'
+        :  (items.ptEXStazioneMeteoTemperaturaEsterno.state <=25) ? 'green'
+        :  (items.ptEXStazioneMeteoTemperaturaEsterno.state <=35) ?  'orange' :
+        'red'"
+      iconSize: 62
+      item: ptEXStazioneMeteoTemperaturaEsterno
+      name: Temperatura Esterno
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+      tooltipPermanent: true
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: analyzer
+      actionAnalyzerCoordSystem: time
+      actionAnalyzerItems:
+        - ptEXStazioneMeteoSensoreCrepuscolare
+      coords: 781.7767024740219,475.2217435511377
+      icon: iconify:clarity:sun-line
+      iconColor: "=(items.ptEXStazioneMeteoSensoreCrepuscolare.state == 0) ? 'cyan' :
+        (items.PTEXStazioneMeteoSensoreCrepuscolare.state < 20) ? 'orange' :
+        'yellow'"
+      iconSize: 60
+      item: ptEXStazioneMeteoSensoreCrepuscolare
+      name: Intensità Luce
+      tooltipFontSize: 24px
+      tooltipOffsetX: 15
+      tooltipOpacity: 0.7
+      tooltipPermanent: true
+    slots:
+      default: []

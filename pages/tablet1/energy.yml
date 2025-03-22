@@ -1,0 +1,55 @@
+config:
+  activeIdx: 0
+  fixedType: canvas
+  grid: 5
+  gridEnable: true
+  hideNavbar: true
+  label: Energy
+  layoutType: fixed
+  order: "2"
+  screenHeight: 712
+  screenWidth: 1022
+  sidebar: true
+blocks: []
+masonry: []
+grid: []
+canvas:
+  - component: oh-canvas-layer
+    config: {}
+    slots:
+      default:
+        - component: oh-canvas-item
+          config:
+            h: 385
+            w: 990
+            x: 15
+            y: 5
+          slots:
+            default:
+              - component: widget:dd-energy
+                config:
+                  ff_ac_consumption: ptPPUnitaEsternaClimaConsumo
+                  gf_ac_consumption: ptPTUnitaEsternaClimaConsumo
+                  grid_color: cyan
+                  grid_consumption: ptEnergiaPrelievo
+                  grid_surplus: ptEnergiaImmissione
+                  grid_surplus_color: orange
+                  home_ba_consumption: ptPSConsumoEnergia
+                  home_color: green
+                  home_consumption: grConsumoEnergia
+                  home_ff_consumption: ptPPConsumoEnergia
+                  home_gf_consumption: ptPTConsumoEnergia
+                  limit_ba_consumption: itRulesVarGlobPSEnergyLimit
+                  limit_ff_consumption: itRulesVarGlobPPEnergyLimit
+                  limit_gf_consumption: itRulesVarGlobPTEnergyLimit
+                  limit_realtime_consumption: itRulesVarGlobEnergyLimit
+                  max_grid_consumption: "4500"
+                  max_pv_production: "3000"
+                  min_opacity: 0.2
+                  pv_own_consumption: ptEnergiaAutoconsumo
+                  pv_production: ptProduzioneFotovoltaico
+                  realtime_consumption: ptEnergiaTempoReale
+                  solar_color: yellow
+                  subvalue_fontsize: 18px
+                  value_borderradius: 10px
+                  value_fontsize: 24px

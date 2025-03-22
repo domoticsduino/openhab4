@@ -1,0 +1,279 @@
+config:
+  backgroundColor: black
+  imageUrl: http://192.168.1.8:8080/static/floorplan/seminterrato.jpg
+  imageWidth: 1920
+  label: Seminterrato
+  noZoomAnimation: true
+  order: "5"
+  sidebar: true
+  tooltipColor: black
+markers:
+  - component: oh-plan-marker
+    config:
+      action: toggle
+      actionCommand: ON
+      actionCommandAlt: OFF
+      actionItem: ptPSTavernettaLuce
+      coords: 646.3508170060811,470.2971658977581
+      icon: iconify:raphael:lamp-alt
+      iconColor: "=(items.ptPSTavernettaLuce.state == 'ON') ? 'yellow' : 'white'"
+      iconSize: 64
+      item: ptPSTavernettaLuce
+      name: Luce Tavernetta
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: toggle
+      actionCommand: ON
+      actionCommandAlt: OFF
+      actionItem: ptPSCorridoioLuce
+      coords: 657.4311167261853,832.2536234211634
+      icon: iconify:raphael:lamp-alt
+      iconColor: "=(items.ptPSCorridoioLuce.state == 'ON') ? 'yellow' : 'white'"
+      iconSize: 64
+      item: ptPSCorridoioLuce
+      name: Luce Corridoio
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: toggle
+      actionCommand: ON
+      actionCommandAlt: OFF
+      actionItem: ptPSLavanderiaLuce
+      coords: 462.9102994176886,731.2997815268803
+      icon: iconify:raphael:lamp-alt
+      iconColor: "=(items.ptPSLavanderiaLuce.state == 'ON') ? 'yellow' : 'white'"
+      iconSize: 64
+      item: ptPSLavanderiaLuce
+      name: Luce Lavanderia
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: toggle
+      actionCommand: ON
+      actionCommandAlt: OFF
+      actionItem: ptPSGarageLuce
+      coords: 296.70580361612485,1311.168800212336
+      icon: iconify:raphael:lamp-alt
+      iconColor: "=(items.ptPSGarageLuce.state == 'ON') ? 'yellow' : 'white'"
+      iconSize: 64
+      item: ptPSGarageLuce
+      name: Luce Garage
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: toggle
+      actionCommand: ON
+      actionCommandAlt: OFF
+      actionItem: ptPSGarageLuce
+      coords: 456.754577350964,1290.2393451854723
+      icon: iconify:raphael:lamp-alt
+      iconColor: "=(items.ptPSGarageLuce.state == 'ON') ? 'yellow' : 'white'"
+      iconSize: 64
+      item: ptPSGarageLuce
+      name: Luce Garage
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: analyzer
+      actionAnalyzerCoordSystem: time
+      actionAnalyzerItems:
+        - ptPSTavernettaTemperatura
+      coords: 723.9129150468108,504.7692094714157
+      icon: "=(items.ptPSTavernettaTemperatura.state <= 5) ?
+        'iconify:fa6-solid:temperature-empty' :
+        (items.ptPSTavernettaTemperatura.state <=15) ?
+        'iconify:fa6-solid:temperature-quarter'
+        :  (items.ptPSTavernettaTemperatura.state <=25) ?
+        'iconify:fa6-solid:temperature-half'
+        :   (items.ptPSTavernettaTemperatura.state <=35)
+        ?  'iconify:fa6-solid:temperature-three-quarters' :
+        'iconify:fa6-solid:temperature-full'   "
+      iconColor: "=(items.ptPSTavernettaTemperatura.state <= 5) ? 'blue' :
+        (items.ptPSTavernettaTemperatura.state <=15) ? 'cyan'
+        :  (items.ptPSTavernettaTemperatura.state <=25) ? 'green'
+        :   (items.ptPSTavernettaTemperatura.state <=35) ?  'orange' : 'red'"
+      iconRotation: 0
+      iconSize: 62
+      item: ptPSTavernettaTemperatura
+      name: Temperatura Tavernetta
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+      tooltipPermanent: true
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: analyzer
+      actionAnalyzerCoordSystem: time
+      actionAnalyzerItems:
+        - ptPSLavanderiaTemperatura
+      coords: 552.7838415918675,824.866756941094
+      icon: "=(items.ptPSLavanderiaTemperatura.state <= 5) ?
+        'iconify:fa6-solid:temperature-empty' :
+        (items.ptPSLavanderiaTemperatura.state <=15) ?
+        'iconify:fa6-solid:temperature-quarter'
+        :  (items.ptPSLavanderiaTemperatura.state <=25) ?
+        'iconify:fa6-solid:temperature-half'
+        :   (items.ptPSLavanderiaTemperatura.state <=35)
+        ?  'iconify:fa6-solid:temperature-three-quarters' :
+        'iconify:fa6-solid:temperature-full'   "
+      iconColor: "=(items.ptPSLavanderiaTemperatura.state <= 5) ? 'blue' :
+        (items.ptPSLavanderiaTemperatura.state <=15) ? 'cyan'
+        :  (items.ptPSLavanderiaTemperatura.state <=25) ? 'green'
+        :  (items.ptPSLavanderiaTemperatura.state <=35) ?  'orange' : 'red'"
+      iconRotation: 0
+      iconSize: 62
+      item: ptPSLavanderiaTemperatura
+      name: Temperatura Lavanderia
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+      tooltipPermanent: true
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: analyzer
+      actionAnalyzerCoordSystem: time
+      actionAnalyzerItems:
+        - ptPSGarageTemperatura
+      coords: 541.7035418717632,1495.8404622140733
+      icon: "=(items.ptPSGarageTemperatura.state <= 5) ?
+        'iconify:fa6-solid:temperature-empty' :
+        (items.ptPSGarageTemperatura.state <=15) ?
+        'iconify:fa6-solid:temperature-quarter'
+        :  (items.ptPSGarageTemperatura.state <=25) ?
+        'iconify:fa6-solid:temperature-half'
+        :   (items.ptPSGarageTemperatura.state <=35)
+        ?  'iconify:fa6-solid:temperature-three-quarters' :
+        'iconify:fa6-solid:temperature-full'   "
+      iconColor: "=(items.ptPSGarageTemperatura.state <= 5) ? 'blue' :
+        (items.ptPSGarageTemperatura.state <=15) ? 'cyan'
+        :  (items.ptPSGarageTemperatura.state <=25) ? 'green'
+        :  (items.ptPSGarageTemperatura.state <=35) ?  'orange' : 'red'"
+      iconRotation: 0
+      iconSize: 62
+      item: ptPSGarageTemperatura
+      name: Temperatura Garage
+      tooltipDirection: right
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+      tooltipPermanent: true
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: analyzer
+      actionAnalyzerCoordSystem: time
+      actionAnalyzerItems:
+        - ptPSTavernettaUmidita
+      coords: 469.0660214844131,361.9564575234054
+      icon: oh:humidity
+      iconSize: 64
+      iconUseState: true
+      item: ptPSTavernettaUmidita
+      name: Umidità Tavernetta
+      tooltipDirection: right
+      tooltipFontSize: 24px
+      tooltipOffsetX: 20
+      tooltipOpacity: 0.7
+      tooltipPermanent: true
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: analyzer
+      actionAnalyzerCoordSystem: time
+      actionAnalyzerItems:
+        - ptPSLavanderiaUmidita
+      coords: 355.80073545668085,651.2753946594607
+      icon: oh:humidity
+      iconSize: 64
+      iconUseState: true
+      item: ptPSLavanderiaUmidita
+      name: Umidità Lavanderia
+      tooltipDirection: right
+      tooltipFontSize: 24px
+      tooltipOffsetX: 20
+      tooltipOpacity: 0.7
+      tooltipPermanent: true
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: analyzer
+      actionAnalyzerCoordSystem: time
+      actionAnalyzerItems:
+        - ptPSGarageUmidita
+      coords: 427.207111430686,1488.4535957340038
+      icon: oh:humidity
+      iconSize: 64
+      iconUseState: true
+      item: ptPSGarageUmidita
+      name: Umidità Garage
+      tooltipDirection: right
+      tooltipFontSize: 24px
+      tooltipOffsetX: 20
+      tooltipOpacity: 0.7
+      tooltipPermanent: true
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: analyzer
+      actionAnalyzerCoordSystem: time
+      actionAnalyzerItems:
+        - ptPSConsumoEnergia
+      coords: 119.42100809445688,94.79811982755857
+      icon: iconify:mdi:power-plug
+      iconColor: blue
+      iconSize: 80
+      item: ptPSConsumoEnergia
+      name: Consumo Energia
+      tooltipDirection: right
+      tooltipFontSize: 48px
+      tooltipOffsetX: 20
+      tooltipOpacity: 0.68
+      tooltipPermanent: true
+    slots:
+      default: []
+  - component: oh-plan-marker
+    config:
+      action: toggle
+      actionCommand: ON
+      actionCommandAlt: OFF
+      actionItem: grLuciPS
+      coords: 888.8862664350296,1641.1155029887734
+      icon: iconify:raphael:lamp-alt
+      iconColor: "=(items.grLuciPS.state == 'ON') ? 'yellow' : 'white'"
+      iconSize: 96
+      item: grLuciPS
+      name: Luci Seminterrato
+      tooltipFontSize: 24px
+      tooltipOffsetX: 10
+      tooltipOpacity: 0.7
+    slots:
+      default: []

@@ -1,0 +1,49 @@
+config:
+  hideNavbar: true
+  label: Pannello di controllo
+  order: "1"
+  sidebar: true
+tabs:
+  - component: oh-tab
+    config:
+      icon: material:home
+      page: page:page_Home
+      title: Home
+    slots:
+      default: []
+  - component: oh-tab
+    config:
+      icon: material:energy_savings_leaf
+      page: page:page_Energy
+      pageConfig: {}
+      title: Energy
+    slots:
+      default: []
+  - component: oh-tab
+    config:
+      icon: material:bedroom_baby
+      page: page:page_FP_PrimoPiano
+      title: Primo Piano
+    slots:
+      default: []
+  - component: oh-tab
+    config:
+      icon: material:living
+      page: page:page_FP_PianoTerra
+      title: Piano Terra
+    slots:
+      default: []
+  - component: oh-tab
+    config:
+      icon: material:garage
+      page: page:page_FP_Seminterrato
+      title: Seminterrato
+    slots:
+      default: []
+  - component: oh-tab
+    config:
+      icon: material:local_florist
+      page: page:page_FP_Giardino
+      title: Giardino
+    slots:
+      default: []

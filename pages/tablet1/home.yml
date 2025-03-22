@@ -1,0 +1,590 @@
+config:
+  activeIdx: 0
+  fixedType: canvas
+  grid: 5
+  gridEnable: false
+  hideNavbar: true
+  label: Home
+  layoutType: fixed
+  order: "2"
+  screenHeight: 712
+  screenWidth: 1022
+  sidebar: true
+  style:
+    --f7-card-content-padding-horizontal: 4px
+    --f7-card-content-padding-vertical: 4px
+    --f7-card-header-min-height: auto
+    --f7-card-header-padding-vertical: 4px
+    --f7-list-item-min-height: auto
+    --f7-list-item-padding-vertical: 0px
+blocks: []
+masonry: []
+grid: []
+canvas:
+  - component: oh-canvas-layer
+    config:
+      layerName: XXXXX
+      preload: true
+    slots:
+      default:
+        - component: oh-canvas-item
+          config:
+            h: 160
+            noCanvasShadow: true
+            w: 340
+            x: 320
+            y: 20
+          slots:
+            default:
+              - component: oh-label-card
+                config:
+                  action: analyzer
+                  actionAnalyzerCoordSystem: time
+                  actionAnalyzerItems:
+                    - ptEnergiaTempoReale
+                  fontSize: 54px
+                  icon: "=(items.ptEnergiaTempoReale.state < 0) ? 'iconify:ic:outline-solar-power'
+                    : 'iconify:ic:baseline-power'"
+                  iconColor: "=(items.ptEnergiaTempoReale.state < 0) ? 'yellow' : 'cyan'"
+                  iconSize: 100
+                  item: ptEnergiaTempoReale
+                  noShadow: true
+                  outline: true
+        - component: oh-canvas-item
+          config:
+            h: 160
+            noCanvasShadow: true
+            w: 300
+            x: 20
+            y: 20
+          slots:
+            default:
+              - component: oh-clock-card
+                config:
+                  dateFontSize: 46px
+                  dateFormat: DD/MM
+                  datePos: above
+                  noBorder: false
+                  noShadow: true
+                  outline: true
+                  showDate: true
+                  timeFontSize: 58px
+                  timeFormat: HH:mm
+        - component: oh-canvas-item
+          config:
+            h: 160
+            noCanvasShadow: true
+            w: 340
+            x: 660
+            y: 20
+          slots:
+            default:
+              - component: oh-label-card
+                config:
+                  action: analyzer
+                  actionAnalyzerCoordSystem: time
+                  actionAnalyzerItems:
+                    - ptProduzioneFotovoltaico
+                  fontSize: 60px
+                  icon: iconify:openmoji:solar-energy
+                  iconSize: 100
+                  item: ptProduzioneFotovoltaico
+                  noShadow: true
+                  outline: true
+                  vertical: false
+        - component: oh-canvas-item
+          config:
+            h: 158
+            noCanvasShadow: true
+            w: 250
+            x: 753
+            y: 539
+          slots:
+            default:
+              - component: oh-label-card
+                config:
+                  action: navigate
+                  actionAnalyzerCoordSystem: time
+                  actionAnalyzerItems:
+                    - ptEnergiaTempoReale
+                  actionGroupPopupItem: grAllarmi
+                  actionPage: page:page_Allarmi
+                  fontSize: 0px
+                  icon: "= (items.grAllarmi.state === 'ON') ?
+                    'iconify:akar-icons:triangle-alert-fill' :
+                    'iconify:ant-design:check-circle-filled'"
+                  iconColor: "= (items.grAllarmi.state === 'OFF') ? 'green' : 'red'"
+                  iconSize: 104
+                  item: grAllarmi
+                  label: "= (items.grAllarmi.state === 'OFF') ? 'OK' : 'ERR'"
+                  noShadow: true
+                  outline: false
+                  vertical: true
+                  actionModal: page:page_Allarmi
+        - component: oh-canvas-item
+          config:
+            h: 125
+            noCanvasShadow: true
+            w: 110
+            x: 130
+            y: 400
+          slots:
+            default:
+              - component: oh-label-card
+                config:
+                  action: group
+                  actionGroupPopupItem: grLuciAutomatiche
+                  fontSize: 56px
+                  icon: iconify:raphael:lamp-alt
+                  iconColor: "=(items.grLuciAutomatiche.state == 'ON') ? 'yellow' : 'white'"
+                  iconSize: 64
+                  item: grLuciAutomatiche
+                  label: " "
+                  noShadow: true
+                  outline: true
+                  title: AUTO
+                  vertical: true
+        - component: oh-canvas-item
+          config:
+            h: 125
+            noCanvasShadow: true
+            w: 110
+            x: 20
+            y: 400
+          slots:
+            default:
+              - component: oh-label-card
+                config:
+                  action: group
+                  actionGroupPopupItem: grLuciManuali
+                  fontSize: 56px
+                  icon: iconify:raphael:lamp-alt
+                  iconColor: "=(items.grLuciManuali.state == 'ON') ? 'yellow' : 'white'"
+                  iconSize: 64
+                  iconUseState: false
+                  item: grLuciManuali
+                  label: " "
+                  noShadow: true
+                  outline: true
+                  title: MAN
+                  vertical: true
+        - component: oh-canvas-item
+          config:
+            h: 120
+            noCanvasShadow: true
+            w: 258
+            x: 742
+            y: 280
+          slots:
+            default:
+              - component: oh-label-card
+                config:
+                  action: analyzer
+                  actionAnalyzerCoordSystem: time
+                  actionAnalyzerItems:
+                    - ptPTCucinaRilevamentoGas
+                  fontSize: 34px
+                  icon: iconify:mdi:gas-burner
+                  iconColor: "=(items.ptPTCucinaRilevamentoGas.state > 100) ? 'red' : 'green'"
+                  iconSize: 56
+                  item: ptPTCucinaRilevamentoGas
+                  noShadow: true
+                  outline: true
+                  title: GAS Cucina
+                  vertical: false
+        - component: oh-canvas-item
+          config:
+            h: 120
+            noCanvasShadow: true
+            w: 180
+            x: 20
+            y: 280
+          slots:
+            default:
+              - component: oh-label-card
+                config:
+                  action: analyzer
+                  actionAnalyzerCoordSystem: time
+                  actionAnalyzerItems:
+                    - grTemperatureEX
+                  fontSize: 36px
+                  icon: iconify:carbon:temperature-celsius
+                  iconSize: 50
+                  item: grTemperatureEX
+                  label: = Math.round(items.grTemperatureEX.state * 10.0) / 10.0 + "°"
+                  noShadow: true
+                  outline: true
+                  title: ESTERNO
+                  vertical: false
+                  style:
+                    opacity: 0.1
+        - component: oh-canvas-item
+          config:
+            h: 120
+            noCanvasShadow: true
+            w: 180
+            x: 200
+            y: 280
+          slots:
+            default:
+              - component: oh-label-card
+                config:
+                  action: analyzer
+                  actionAnalyzerCoordSystem: time
+                  actionAnalyzerItems:
+                    - grTemperaturePP
+                  fontSize: 36px
+                  icon: iconify:carbon:temperature-celsius
+                  iconSize: 50
+                  item: grTemperaturePP
+                  label: = Math.round(items.grTemperaturePP.state * 10.0) / 10.0 + "°"
+                  noShadow: true
+                  outline: true
+                  title: PRIMO PIANO
+                  vertical: false
+        - component: oh-canvas-item
+          config:
+            h: 120
+            noCanvasShadow: true
+            w: 180
+            x: 380
+            y: 280
+          slots:
+            default:
+              - component: oh-label-card
+                config:
+                  action: analyzer
+                  actionAnalyzerCoordSystem: time
+                  actionAnalyzerItems:
+                    - grTemperaturePT
+                  fontSize: 36px
+                  icon: iconify:carbon:temperature-celsius
+                  iconSize: 50
+                  item: grTemperaturePT
+                  label: = Math.round(items.grTemperaturePT.state * 10.0) / 10.0 + "°"
+                  noShadow: true
+                  outline: true
+                  title: PIANO TERRA
+                  vertical: false
+        - component: oh-canvas-item
+          config:
+            h: 120
+            noCanvasShadow: true
+            w: 180
+            x: 560
+            y: 280
+          slots:
+            default:
+              - component: oh-label-card
+                config:
+                  action: analyzer
+                  actionAnalyzerCoordSystem: time
+                  actionAnalyzerItems:
+                    - grTemperaturePS
+                  fontSize: 36px
+                  icon: iconify:carbon:temperature-celsius
+                  iconSize: 50
+                  item: grTemperaturePS
+                  label: = Math.round(items.grTemperaturePS.state * 10.0) / 10.0 + "°"
+                  noShadow: true
+                  outline: true
+                  title: SEMINTERRATO
+                  vertical: false
+        - component: oh-canvas-item
+          config:
+            h: 86
+            noCanvasShadow: true
+            w: 255
+            x: 20
+            y: 525
+          slots:
+            default:
+              - component: oh-label-card
+                config:
+                  action: analyzer
+                  actionAnalyzerCoordSystem: time
+                  actionAnalyzerItems:
+                    - ptNetworkSpeedtestDownload
+                  fontSize: 32px
+                  icon: iconify:mingcute:download-3-fill
+                  iconSize: 48
+                  label: =Math.round(#'ptNetworkSpeedtestDownload') + ' Mbps'
+                  noShadow: true
+                  outline: true
+                  vertical: false
+        - component: oh-canvas-item
+          config:
+            h: 86
+            noCanvasShadow: true
+            w: 255
+            x: 20
+            y: 611
+          slots:
+            default:
+              - component: oh-label-card
+                config:
+                  action: analyzer
+                  actionAnalyzerCoordSystem: time
+                  actionAnalyzerItems:
+                    - ptNetworkSpeedtestUpload
+                  fontSize: 32px
+                  icon: iconify:mingcute:upload-3-fill
+                  iconSize: 48
+                  label: =Math.round(#'ptNetworkSpeedtestUpload') + ' Mbps'
+                  noShadow: true
+                  outline: true
+                  vertical: false
+        - component: oh-canvas-item
+          config:
+            h: 86
+            noCanvasShadow: true
+            w: 270
+            x: 275
+            y: 525
+          slots:
+            default:
+              - component: oh-label-card
+                config:
+                  action: group
+                  actionGroupPopupItem: eqPTSoggiornoRobotVacuum
+                  fontSize: 32px
+                  icon: iconify:mdi:robot-vacuum
+                  iconSize: 52
+                  item: ptPTSoggiornoRobotVacuumState
+                  noShadow: true
+                  outline: true
+                  vertical: false
+        - component: oh-canvas-item
+          config:
+            h: 100
+            noCanvasShadow: true
+            w: 325
+            x: 20
+            y: 180
+          slots:
+            default:
+              - component: oh-label-card
+                config:
+                  action: analyzer
+                  actionAnalyzerCoordSystem: time
+                  actionAnalyzerItems:
+                    - ptPPConsumoEnergia
+                  fontSize: 42px
+                  icon: iconify:subway:power
+                  iconSize: 66
+                  item: ptPPConsumoEnergia
+                  label: "= '1P: ' + items.ptPPConsumoEnergia.state + ' W'"
+                  noShadow: true
+                  outline: true
+                  vertical: false
+        - component: oh-canvas-item
+          config:
+            h: 100
+            noCanvasShadow: true
+            w: 325
+            x: 346
+            y: 180
+          slots:
+            default:
+              - component: oh-label-card
+                config:
+                  action: analyzer
+                  actionAnalyzerCoordSystem: time
+                  actionAnalyzerItems:
+                    - ptPTConsumoEnergia
+                  fontSize: 42px
+                  icon: iconify:subway:power
+                  iconSize: 66
+                  item: ptPTConsumoEnergia
+                  label: "= 'PT: ' + items.ptPTConsumoEnergia.state + ' W'"
+                  noShadow: true
+                  outline: true
+                  vertical: false
+        - component: oh-canvas-item
+          config:
+            h: 100
+            noCanvasShadow: true
+            w: 325
+            x: 675
+            y: 180
+          slots:
+            default:
+              - component: oh-label-card
+                config:
+                  action: analyzer
+                  actionAnalyzerCoordSystem: time
+                  actionAnalyzerItems:
+                    - ptPSConsumoEnergia
+                  fontSize: 42px
+                  icon: iconify:subway:power
+                  iconSize: 66
+                  item: ptPSConsumoEnergia
+                  label: "= 'PS: ' + items.ptPSConsumoEnergia.state + ' W'"
+                  noShadow: true
+                  outline: true
+                  vertical: false
+        - component: oh-canvas-item
+          config:
+            h: 125
+            noCanvasShadow: true
+            w: 190
+            x: 241
+            y: 400
+          slots:
+            default:
+              - component: oh-label-card
+                config:
+                  action: group
+                  actionGroupPopupItem: eqPTSoggiornoClima
+                  fontSize: 36px
+                  icon: =@'ptPTSoggiornoClimaSwitch'=='OFF'?'iconify:mdi:air-conditioner':@'ptPTSoggiornoClimaModalita'=='heat'?'iconify:mdi:heater':'iconify:mdi:air-conditioner'
+                  iconColor: =@'ptPTSoggiornoClimaSwitch'=='OFF'?'inherit':@'ptPTSoggiornoClimaSwitch'=='OFF'?'gray':@'ptPTSoggiornoClimaModalita'=='heat'?'red':'cyan'
+                  iconSize: 40
+                  item: ptPTSoggiornoClimaTemperaturaImpostata
+                  noShadow: true
+                  outline: true
+                  title: Clima Soggiorno
+                  style:
+                    opacity: =@'ptPTSoggiornoClimaSwitch'=='OFF'?0.5:1
+        - component: oh-canvas-item
+          config:
+            h: 125
+            noCanvasShadow: true
+            w: 190
+            x: 431
+            y: 399
+          slots:
+            default:
+              - component: oh-label-card
+                config:
+                  action: group
+                  actionGroupPopupItem: eqPTStudioClima
+                  fontSize: 36px
+                  icon: =@'ptPTStudioClimaModalita'=='heat'?'iconify:mdi:heater':'iconify:mdi:air-conditioner'
+                  iconColor: =@'ptPTStudioClimaSwitch'=='OFF'?'inherit':@'ptPTStudioClimaModalita'=='heat'?'red':'cyan'
+                  iconSize: 40
+                  item: ptPTStudioClimaTemperaturaImpostata
+                  noShadow: true
+                  outline: true
+                  title: Clima Studio
+                  style:
+                    opacity: =@'ptPTStudioClimaSwitch'=='OFF'?0.5:1
+        - component: oh-canvas-item
+          config:
+            h: 125
+            noCanvasShadow: true
+            w: 190
+            x: 621
+            y: 400
+          slots:
+            default:
+              - component: oh-label-card
+                config:
+                  action: group
+                  actionGroupPopupItem: eqPPCameraClima
+                  fontSize: 36px
+                  icon: =@'ptPPCameraClimaSwitch'=='OFF'?'iconify:mdi:air-conditioner':@'ptPPCameraClimaModalita'=='heat'?'iconify:mdi:heater':'iconify:mdi:air-conditioner'
+                  iconColor: =@'ptPPCameraClimaSwitch'=='OFF'?'inherit':@'ptPPCameraClimaSwitch'=='OFF'?'gray':@'ptPPCameraClimaModalita'=='heat'?'red':'cyan'
+                  iconSize: 40
+                  item: ptPPCameraClimaTemperaturaImpostata
+                  noShadow: true
+                  outline: true
+                  title: Clima Camera
+                  style:
+                    opacity: =@'ptPPCameraClimaSwitch'=='OFF'?0.5:1
+        - component: oh-canvas-item
+          config:
+            h: 125
+            noCanvasShadow: true
+            w: 190
+            x: 810
+            y: 400
+          slots:
+            default:
+              - component: oh-label-card
+                config:
+                  action: group
+                  actionGroupPopupItem: eqPPCamerettaClima
+                  fontSize: 36px
+                  icon: =@'ptPPCamerettaClimaSwitch'=='OFF'?'iconify:mdi:air-conditioner':@'ptPPCamerettaClimaModalita'=='heat'?'iconify:mdi:heater':'iconify:mdi:air-conditioner'
+                  iconColor: =@'ptPPCamerettaClimaSwitch'=='OFF'?'inherit':@'ptPPCamerettaClimaSwitch'=='OFF'?'gray':@'ptPPCamerettaClimaModalita'=='heat'?'red':'cyan'
+                  iconSize: 40
+                  item: ptPPCamerettaClimaTemperaturaImpostata
+                  noShadow: true
+                  outline: true
+                  title: Clima Cameretta
+                  style:
+                    opacity: =@'ptPPCamerettaClimaSwitch'=='OFF'?0.5:1
+        - component: oh-canvas-item
+          config:
+            h: 86
+            w: 195
+            x: 545
+            y: 611
+            noCanvasShadow: true
+          slots:
+            default:
+              - component: oh-label-card
+                config:
+                  action: analyzer
+                  actionAnalyzerChartType: day
+                  actionAnalyzerItems:
+                    - ptHabPanel01Battery
+                  fontSize: 32px
+                  icon: =@'ptHabPanel01Power'=='ON'?'iconify:mdi:power-plug-battery':'battery'
+                  iconColor: cyan
+                  iconSize: 48
+                  iconUseState: true
+                  item: ptHabPanel01Battery
+                  noShadow: true
+                  outline: true
+                  style:
+                    --f7-list-item-min-height: auto
+                    --f7-list-item-padding-vertical: 0
+        - component: oh-canvas-item
+          config:
+            h: 86
+            noCanvasShadow: true
+            w: 270
+            x: 275
+            y: 611
+          slots:
+            default:
+              - component: oh-label-card
+                config:
+                  fontSize: 32px
+                  icon: iconify:mdi:washing-machine
+                  iconSize: 52
+                  item: ptPSLavanderiaLavatriceWasherState
+                  noShadow: true
+                  outline: true
+                  vertical: false
+                  action: group
+                  actionGroupPopupItem: eqPSLavanderiaLavatrice
+        - component: oh-canvas-item
+          config:
+            h: 86
+            noCanvasShadow: true
+            w: 195
+            x: 545
+            y: 524
+          slots:
+            default:
+              - component: oh-label-card
+                config:
+                  fontSize: 32px
+                  icon: "=(items.ptEXStazioneMeteoCrepuscolare.state > 600) ?
+                    'iconify:mdi:white-balance-sunny' :
+                    (items.ptEXStazioneMeteoCrepuscolare.state > 180) ?
+                    'iconify:mdi:weather-sunset' : 'iconify:mdi:weather-night'"
+                  iconColor: "=(items.ptEXStazioneMeteoCrepuscolare.state > 600) ? 'yellow' :
+                    (items.ptEXStazioneMeteoCrepuscolare.state > 180) ? 'gray' :
+                    'blue'"
+                  iconSize: 52
+                  item: ptEXStazioneMeteoCrepuscolare
+                  noShadow: true
+                  outline: true
+                  action: analyzer
+                  actionAnalyzerItems:
+                    - ptEXStazioneMeteoCrepuscolare
+                  actionAnalyzerCoordSystem: time
