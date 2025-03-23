@@ -217,7 +217,7 @@ canvas:
                   title: ESTERNO
                   vertical: false
                   style:
-                    opacity: 0.1
+                    opacity: 1
         - component: oh-canvas-item
           config:
             h: 120
