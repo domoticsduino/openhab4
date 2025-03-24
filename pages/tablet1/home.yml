@@ -438,7 +438,7 @@ canvas:
                   actionGroupPopupItem: eqPTSoggiornoClima
                   fontSize: 36px
                   icon: =@'ptPTSoggiornoClimaSwitch'=='OFF'?'iconify:mdi:air-conditioner':@'ptPTSoggiornoClimaModalita'=='heat'?'iconify:mdi:heater':'iconify:mdi:air-conditioner'
-                  iconColor: =@'ptPTSoggiornoClimaSwitch'=='OFF'?'inherit':@'ptPTSoggiornoClimaSwitch'=='OFF'?'gray':@'ptPTSoggiornoClimaModalita'=='heat'?'red':'cyan'
+                  iconColor: =@'ptPTSoggiornoClimaSwitch'=='OFF'?'inherit':@'ptPTSoggiornoClimaModalita'=='heat'?'red':'cyan'
                   iconSize: 40
                   item: ptPTSoggiornoClimaTemperaturaImpostata
                   noShadow: true
