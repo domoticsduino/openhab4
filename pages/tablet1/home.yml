@@ -85,7 +85,7 @@ canvas:
                   actionAnalyzerCoordSystem: time
                   actionAnalyzerItems:
                     - ptProduzioneFotovoltaico
-                  fontSize: 60px
+                  fontSize: 54px
                   icon: iconify:openmoji:solar-energy
                   iconSize: 100
                   item: ptProduzioneFotovoltaico
@@ -108,6 +108,7 @@ canvas:
                   actionAnalyzerItems:
                     - ptEnergiaTempoReale
                   actionGroupPopupItem: grAllarmi
+                  actionModal: page:page_Allarmi
                   actionPage: page:page_Allarmi
                   fontSize: 0px
                   icon: "= (items.grAllarmi.state === 'ON') ?
@@ -120,7 +121,6 @@ canvas:
                   noShadow: true
                   outline: false
                   vertical: true
-                  actionModal: page:page_Allarmi
         - component: oh-canvas-item
           config:
             h: 125
@@ -197,8 +197,8 @@ canvas:
             h: 120
             noCanvasShadow: true
             w: 180
-            x: 20
-            y: 280
+            x: 21
+            y: 279
           slots:
             default:
               - component: oh-label-card
@@ -214,10 +214,10 @@ canvas:
                   label: = Math.round(items.grTemperatureEX.state * 10.0) / 10.0 + "°"
                   noShadow: true
                   outline: true
-                  title: ESTERNO
-                  vertical: false
                   style:
                     opacity: 1
+                  title: ESTERNO
+                  vertical: false
         - component: oh-canvas-item
           config:
             h: 120
@@ -295,7 +295,7 @@ canvas:
             h: 86
             noCanvasShadow: true
             w: 255
-            x: 20
+            x: 23
             y: 525
           slots:
             default:
@@ -312,6 +312,9 @@ canvas:
                   noShadow: true
                   outline: true
                   vertical: false
+                  style:
+                    - opacity: "=dayjs(@@'ptNetworkSpeedtestTS').add(15, 'minute') < dayjs() ? 0.3 :
+                        1"
         - component: oh-canvas-item
           config:
             h: 86
@@ -428,8 +431,8 @@ canvas:
             h: 125
             noCanvasShadow: true
             w: 190
-            x: 241
-            y: 400
+            x: 242
+            y: 401
           slots:
             default:
               - component: oh-label-card
@@ -443,9 +446,9 @@ canvas:
                   item: ptPTSoggiornoClimaTemperaturaImpostata
                   noShadow: true
                   outline: true
-                  title: Clima Soggiorno
                   style:
                     opacity: =@'ptPTSoggiornoClimaSwitch'=='OFF'?0.5:1
+                  title: Clima Soggiorno
         - component: oh-canvas-item
           config:
             h: 125
@@ -460,15 +463,15 @@ canvas:
                   action: group
                   actionGroupPopupItem: eqPTStudioClima
                   fontSize: 36px
-                  icon: =@'ptPTStudioClimaModalita'=='heat'?'iconify:mdi:heater':'iconify:mdi:air-conditioner'
+                  icon: =@'ptPTStudioClimaSwitch'=='OFF'?'iconify:mdi:air-conditioner':@'ptPTStudioClimaModalita'=='heat'?'iconify:mdi:heater':'iconify:mdi:air-conditioner'
                   iconColor: =@'ptPTStudioClimaSwitch'=='OFF'?'inherit':@'ptPTStudioClimaModalita'=='heat'?'red':'cyan'
                   iconSize: 40
                   item: ptPTStudioClimaTemperaturaImpostata
                   noShadow: true
                   outline: true
-                  title: Clima Studio
                   style:
                     opacity: =@'ptPTStudioClimaSwitch'=='OFF'?0.5:1
+                  title: Clima Studio
         - component: oh-canvas-item
           config:
             h: 125
@@ -489,9 +492,9 @@ canvas:
                   item: ptPPCameraClimaTemperaturaImpostata
                   noShadow: true
                   outline: true
-                  title: Clima Camera
                   style:
                     opacity: =@'ptPPCameraClimaSwitch'=='OFF'?0.5:1
+                  title: Clima Camera
         - component: oh-canvas-item
           config:
             h: 125
@@ -512,16 +515,16 @@ canvas:
                   item: ptPPCamerettaClimaTemperaturaImpostata
                   noShadow: true
                   outline: true
-                  title: Clima Cameretta
                   style:
                     opacity: =@'ptPPCamerettaClimaSwitch'=='OFF'?0.5:1
+                  title: Clima Cameretta
         - component: oh-canvas-item
           config:
             h: 86
+            noCanvasShadow: true
             w: 195
             x: 545
             y: 611
-            noCanvasShadow: true
           slots:
             default:
               - component: oh-label-card
@@ -552,6 +555,8 @@ canvas:
             default:
               - component: oh-label-card
                 config:
+                  action: group
+                  actionGroupPopupItem: eqPSLavanderiaLavatrice
                   fontSize: 32px
                   icon: iconify:mdi:washing-machine
                   iconSize: 52
@@ -559,8 +564,6 @@ canvas:
                   noShadow: true
                   outline: true
                   vertical: false
-                  action: group
-                  actionGroupPopupItem: eqPSLavanderiaLavatrice
         - component: oh-canvas-item
           config:
             h: 86
@@ -572,6 +575,10 @@ canvas:
             default:
               - component: oh-label-card
                 config:
+                  action: analyzer
+                  actionAnalyzerCoordSystem: time
+                  actionAnalyzerItems:
+                    - ptEXStazioneMeteoCrepuscolare
                   fontSize: 32px
                   icon: "=(items.ptEXStazioneMeteoCrepuscolare.state > 600) ?
                     'iconify:mdi:white-balance-sunny' :
@@ -584,7 +591,3 @@ canvas:
                   item: ptEXStazioneMeteoCrepuscolare
                   noShadow: true
                   outline: true
-                  action: analyzer
-                  actionAnalyzerItems:
-                    - ptEXStazioneMeteoCrepuscolare
-                  actionAnalyzerCoordSystem: time
